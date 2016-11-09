@@ -1,0 +1,23 @@
+version: '2'
+services:
+  powerdns:
+    image: mosaiksoftware/debian-powerdns
+    build: .
+    links:
+      - "powerdns-mysql:powerdns-mysql"
+    environment:
+      - MYSQL_ROOT_PASSWORD=secretrootpassword
+      - MYSQL_DATABASE=powerdns
+      - MYSQL_USER=powerdns
+      - MYSQL_PASSWORD=powerdns 
+      - POWERDNS_APIKEY=123dns
+      - POWERDNS_SLAVE=yes
+      - POWERDNS_SLAVE-CYCLE-INTERVAL=60
+  
+  powerdns-mysql:
+    image: mariadb:10.1
+    environment:
+      - MYSQL_ROOT_PASSWORD=secretrootpassword
+      - MYSQL_DATABASE=powerdns
+      - MYSQL_USER=powerdns
+      - MYSQL_PASSWORD=powerdns

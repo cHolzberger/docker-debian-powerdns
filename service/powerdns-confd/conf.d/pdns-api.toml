@@ -1,0 +1,7 @@
+[template]
+src = "pdns.api.conf"
+dest = "/etc/powerdns/pdns.d/pdns.local.api.conf"
+keys = [
+	"/powerdns/apikey",
+]
+reload_cmd = "sv restart powerdns"

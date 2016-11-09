@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "Bootstrap"
+
+mysql --host=powerdns-mysql --user=$MYSQL_USER --password=$MYSQL_PASSWORD --database=$MYSQL_DATABASE < /usr/share/doc/pdns-backend-mysql/schema.mysql.sql

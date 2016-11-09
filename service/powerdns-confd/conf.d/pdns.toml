@@ -1,0 +1,9 @@
+[template]
+src = "pdns.gmysql.conf"
+dest = "/etc/powerdns/pdns.d/pdns.local.gmysql.conf"
+keys = [
+	"/mysql/user",
+	"/mysql/password",
+	"/mysql/database",
+]
+reload_cmd = "sv restart powerdns"

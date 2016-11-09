@@ -1,0 +1,3 @@
+#!/bin/bash
+sv start powerdns-confd || exit 1
+exec pdns_server --daemon=no

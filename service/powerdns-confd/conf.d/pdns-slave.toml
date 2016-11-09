@@ -1,0 +1,8 @@
+[template]
+src = "pdns.slave.conf"
+dest = "/etc/powerdns/pdns.d/pdns.local.slave.conf"
+keys = [
+	"/powerdns/slave",
+	"/powerdns/slave-cycle-interval"
+]
+reload_cmd = "sv restart powerdns"
