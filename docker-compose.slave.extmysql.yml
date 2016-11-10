@@ -1,0 +1,14 @@
+version: '2'
+services:
+  powerdns:
+    image: mosaiksoftware/debian-powerdns
+    build: .
+    links:
+      - "powerdns-mysql:powerdns-mysql"
+    env_file:
+      - powerdns.env
+    environment:
+      - POWERDNS_APIKEY=123dns
+      - POWERDNS_SLAVE=yes
+      - POWERDNS_SLAVE-CYCLE-INTERVAL=60
+  

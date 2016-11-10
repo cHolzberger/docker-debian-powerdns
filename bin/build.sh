@@ -1,6 +1,6 @@
 #!/bin/sh 
 set -e
-REPO=mosaiksoftware/debian
+REPO=mosaiksoftware/debian-powerdns
 
 SCRIPTPATH=$(realpath "$0")
 DIRNAME=$(dirname "$SCRIPTPATH")

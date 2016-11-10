@@ -1,0 +1,3 @@
+#!/bin/bash 
+
+cat /etc/keys/FD380FBB-pub.asc | apt-key add -

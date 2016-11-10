@@ -1,0 +1,9 @@
+version: 2
+
+powerdns-mysql:
+  image: mariadb:10.1
+  env_file: 
+    - powerdns.env
+  environment:
+    - MYSQL_ROOT_PASSWORD=secretrootpassword
+      

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+set-selections powerdns
+apply-apt jessie-auth-40 jessie-auth-40

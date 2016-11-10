@@ -1,4 +1,3 @@
 pdns-server
 pdns-backend-mysql
 pdns-backend-remote
-mysql-client
